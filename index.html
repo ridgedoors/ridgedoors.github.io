@@ -408,6 +408,25 @@
       border-radius: 2px;
     }
 
+    .product-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.9rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(184,148,63,0.4);
+      padding-bottom: 2px;
+      transition: color 0.25s, border-color 0.25s;
+    }
+
+    .product-link:hover {
+      color: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
     /* WHY RIDGE */
     .why { background: var(--black); color: var(--white); }
 
@@ -744,6 +763,7 @@
           <h3>Steel Doors</h3>
           <p>Heavy-duty steel main doors and safety doors built for maximum security and long-term durability. Available in modern designs for homes, villas and commercial spaces across Kanyakumari district.</p>
           <span class="product-tag">Most Popular</span>
+          <div><a href="/steel-vs-wood.html" class="product-link">See real cost comparison: Steel vs Wood →</a></div>
         </div>
       </div>
 
