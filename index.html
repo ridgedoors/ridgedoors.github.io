@@ -2,9 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ridge – Premium Steel Doors, UPVC Windows & FRP Doors | Thengapattanam, Kanyakumari</title>
   <meta name="description" content="Ridge is Kanyakumari district's premier showroom for steel doors, UPVC windows, FRP doors, WPC panels and steel windows. Serving Nagercoil, Marthandam, Colachel, Thuckalay, Kaliyakkavilai and all of Kanyakumari district. Visit us at Thengapattanam." />
@@ -408,25 +405,6 @@
       border-radius: 2px;
     }
 
-    .product-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      margin-top: 0.9rem;
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--gold);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(184,148,63,0.4);
-      padding-bottom: 2px;
-      transition: color 0.25s, border-color 0.25s;
-    }
-
-    .product-link:hover {
-      color: var(--gold-light);
-      border-color: var(--gold-light);
-    }
-
     /* WHY RIDGE */
     .why { background: var(--black); color: var(--white); }
 
@@ -673,6 +651,83 @@
       box-shadow: 0 6px 28px rgba(37,211,102,0.5);
     }
 
+    /* FAQ */
+    .faq { background: var(--cream); }
+
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 3rem;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-question {
+      width: 100%;
+      background: var(--white);
+      border: none;
+      padding: 1.4rem 1.5rem;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      transition: background 0.2s, color 0.2s;
+      line-height: 1.4;
+    }
+
+    .faq-question:hover {
+      background: var(--cream);
+      color: var(--steel);
+    }
+
+    .faq-question.active {
+      background: var(--steel);
+      color: var(--white);
+    }
+
+    .faq-icon {
+      font-size: 1.4rem;
+      font-weight: 300;
+      min-width: 24px;
+      text-align: center;
+      transition: transform 0.3s;
+      line-height: 1;
+    }
+
+    .faq-question.active .faq-icon {
+      transform: rotate(45deg);
+      color: var(--gold);
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 1.2rem 1.5rem 1.4rem;
+      background: var(--white);
+      border-top: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .faq-answer p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    .faq-answer.open { display: block; }
+
     /* MOBILE */
     @media (max-width: 768px) {
       nav { padding: 1rem; }
@@ -708,6 +763,8 @@
     <li><a href="#products">Products</a></li>
     <li><a href="#why">Why Ridge</a></li>
     <li><a href="#areas">Service Areas</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="steel-vs-wood.html">Steel vs Wood</a></li>
     <li><a href="#contact" class="nav-cta">Contact Us</a></li>
   </ul>
 </nav>
@@ -763,7 +820,7 @@
           <h3>Steel Doors</h3>
           <p>Heavy-duty steel main doors and safety doors built for maximum security and long-term durability. Available in modern designs for homes, villas and commercial spaces across Kanyakumari district.</p>
           <span class="product-tag">Most Popular</span>
-          <div><a href="/steel-vs-wood.html" class="product-link">See real cost comparison: Steel vs Wood →</a></div>
+          <a href="steel-vs-wood.html" style="display:inline-block;margin-top:0.8rem;font-size:0.78rem;color:var(--steel);font-weight:600;text-decoration:none;border-bottom:1px solid var(--steel);">Steel vs Wood — Compare →</a>
         </div>
       </div>
 
@@ -886,6 +943,169 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-inner">
+    <div class="section-tag">Got Questions?</div>
+    <h2 class="section-title">Frequently Asked<br>Questions</h2>
+    <p class="areas-intro">Real answers to the questions our customers ask most — about steel doors, coastal conditions, installation and more.</p>
+
+    <div class="faq-grid">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Are steel doors suitable for homes in coastal areas like Kanyakumari?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, steel doors can be used in coastal and high-humidity areas like Kanyakumari, Kaliyakkavilai, Marthandam and Colachel — but the construction and protective finish matter. Coastal air contains salt and moisture, which can accelerate corrosion, so the door should have appropriate surface protection for its location. Ridge can recommend the right configuration based on your actual site conditions.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Will steel doors rust?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>A properly finished and maintained steel door from a quality manufacturer significantly reduces corrosion risk. At Ridge, we recommend and supply doors with appropriate surface protection for coastal conditions — and we guide customers on the right specification for their specific location and exposure. Key factors include the steel substrate, surface preparation, coating, edges, welds, hardware and installation.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Are steel doors suitable for bedrooms?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. Steel doors are commonly used for bedrooms as well as main entrances and other areas of a home. The important considerations are the door's core, construction, sealing, hardware and overall installation. A properly selected steel door provides durability and security without making a bedroom unsuitable for normal residential use.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do steel doors make an AC room hotter or consume more AC?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>The steel material itself does not mean that an air-conditioned room will automatically lose cooling. A door's thermal performance depends on the door construction, core filling, air leakage around the frame and how well the opening is sealed. Ridge doors with an internal honeycomb-type filling are not simply a single sheet of exposed steel. Proper installation and sealing around the frame are also important for AC rooms.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Are steel doors stronger than wooden doors?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Steel generally provides a strong and durable door construction, but the complete door system matters — including the steel, frame, internal construction, hinges, locks and installation. Wood also has different grades and constructions, so comparing only the surface material can be misleading. The better comparison is between the complete specifications of the two doors.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is the advantage of a steel door over a wooden door?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Homeowners generally choose steel doors for a combination of durability, dimensional stability, security and lower susceptibility to problems such as termite damage and moisture-related swelling or warping — all especially relevant in Kerala border and coastal Tamil Nadu conditions. The right choice still depends on where the door will be used, the design required and your budget.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can steel doors be customised to my required size?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Many steel door systems can accommodate different sizes, but the available size range depends on the particular door design and manufacturer. Before ordering, Ridge checks the opening size and required door configuration so that the correct door size and installation details can be planned.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I choose different colours and designs?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. The available colours, surface finishes and design options depend on the particular door range. Ridge offers different styles so that customers can select a door based on the architecture of the house, entrance design and budget, rather than being restricted to one standard appearance.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you provide installation?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. Ridge can coordinate installation for doors supplied through us. Proper installation is important because even a good-quality door can perform poorly if the frame is not correctly positioned, aligned, anchored and sealed.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do steel doors require maintenance?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes, like any exterior building product, steel doors benefit from periodic inspection and basic maintenance. Keep the surface clean, especially where the door is exposed to coastal salt or rain, and attend to scratches, coating damage or loose hardware before they become larger problems. Coastal environments like Kanyakumari deserve particular attention because salt exposure can accelerate corrosion.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I replace an existing wooden door with a steel door?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>In many cases, yes. However, the existing opening should be inspected before finalising the door. The frame condition, opening dimensions, wall construction, threshold and installation method all need to be considered. For renovation projects, Ridge can assess the opening and recommend the appropriate approach.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What brands of steel doors do you stock?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Ridge is an authorized dealer for Hawaii and Kinza steel doors — two of the most trusted brands in the region. We stock a curated range from both brands covering different budgets and design requirements. Visit our Thengapattanam showroom to explore the full collection.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          What is the price range of steel doors in Kanyakumari?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Steel door prices vary based on size, design, brand and hardware. At Ridge, our range starts from approximately ₹18,000 for a standard steel main door with frame and hardware. We provide detailed quotations based on your specific requirements — call us on 90800 19508 for a quick estimate.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you supply UPVC windows and FRP doors as well?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. Ridge is a multi-product showroom offering steel doors, UPVC windows and doors, FRP bathroom doors, steel windows and WPC wall panels and louvers — all available from our Thengapattanam showroom serving all of Kanyakumari district.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Do you supply doors outside Thengapattanam?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. Ridge serves customers across Kanyakumari district — including Nagercoil, Marthandam, Colachel, Kaliyakkavilai, Thuckalay, Kulasekaram, Padmanabhapuram, Boothapandi, Kuzhithurai, Nithravilai, Enayam and surrounding areas. Contact us to discuss supply and installation arrangements for your location.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="section-inner">
@@ -932,12 +1152,11 @@
 
       <div class="map-placeholder">
         <p>📍 Ridge Showroom, Thengapattanam</p>
-        <a href="https://maps.app.goo.gl/CwhFFu4MQPwYnjXJA?g_st=ac" target="_blank" class="map-btn">Open in Google Maps</a>
+        <a href="https://maps.google.com/?q=26/249+Near+SR+Hospital+Main+Road+Thengapattanam+Kanyakumari+629173" target="_blank" class="map-btn">Open in Google Maps</a>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- FOOTER -->
 <footer>
@@ -947,6 +1166,83 @@
   <p>Serving Nagercoil · Marthandam · Colachel · Kaliyakkavilai · Thuckalay · Kulasekaram · Padmanabhapuram and all of Kanyakumari District</p>
   <p style="margin-top:1rem; font-size:0.7rem;">© 2024 Ridge. All rights reserved. | ridgedoors.in</p>
 </footer>
+
+<!-- FAQ SCHEMA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are steel doors suitable for homes in coastal areas like Kanyakumari?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, steel doors can be used in coastal and high-humidity areas like Kanyakumari, Kaliyakkavilai, Marthandam and Colachel — but the construction and protective finish matter. Ridge can recommend the right configuration based on your actual site conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will steel doors rust?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A properly finished and maintained steel door from a quality manufacturer significantly reduces corrosion risk. At Ridge, we recommend and supply doors with appropriate surface protection for coastal conditions and guide customers on the right specification for their specific location and exposure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are steel doors suitable for bedrooms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Steel doors are commonly used for bedrooms as well as main entrances. A properly selected steel door provides durability and security without making a bedroom unsuitable for normal residential use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What brands of steel doors do you stock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ridge is an authorized dealer for Hawaii and Kinza steel doors — two of the most trusted brands in the region. We stock a curated range from both brands covering different budgets and design requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the price range of steel doors in Kanyakumari?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Steel door prices vary based on size, design, brand and hardware. At Ridge, our range starts from approximately ₹18,000 for a standard steel main door with frame and hardware."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you supply doors outside Thengapattanam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Ridge serves customers across Kanyakumari district — including Nagercoil, Marthandam, Colachel, Kaliyakkavilai, Thuckalay, Kulasekaram, Padmanabhapuram, Boothapandi, Kuzhithurai, Nithravilai, Enayam and surrounding areas."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- FAQ JAVASCRIPT -->
+<script>
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+
+  // Close all
+  document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+
+  // Open clicked if it was closed
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('active');
+    btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+</script>
 
 <!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/919080019508" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">💬</a>
