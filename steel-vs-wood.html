@@ -44,7 +44,7 @@
       "name": "What is the average cost of a steel door in Kanyakumari and Tirunelveli?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Mid-range steel doors typically start around 18,000 rupees per door installed, varying by size and design. RIDGE offers exact quotes based on door dimensions and site requirements."
+        "text": "Steel door prices vary with the type of door (for example imported or regular steel), size, design, brand and hardware. RIDGE offers exact quotes based on door dimensions and site requirements."
       }
     }
   ]
@@ -312,6 +312,7 @@
 </style>
 </head>
 <body>
+<nav style="background:#17171a;padding:12px 20px;font:14px/1.4 system-ui,sans-serif;display:flex;flex-wrap:wrap;gap:18px;align-items:center"><a href="/" style="color:#f4f0e8;text-decoration:none;font-weight:600;letter-spacing:.2em">RIDGE</a><a href="/windows/" style="color:#d8d3c6;text-decoration:none">Windows</a><a href="/frp-doors/" style="color:#d8d3c6;text-decoration:none">FRP and pre-hung doors</a></nav>
 <div class="wrap">
 
   <header>
@@ -339,6 +340,8 @@
       <div class="years-value" id="yearsValue">10 years</div>
       <input type="range" id="yearsSlider" min="2" max="15" value="10" step="1" aria-label="Years of ownership">
     </div>
+  <div class="control-group"><div class="control-label">Steel door price per door (₹)</div><input type="text" id="steelPrice" value="18000" inputmode="numeric" aria-label="Steel door price per door" style="width:130px;padding:10px;border:1px solid #bbb;border-radius:6px;font:inherit"></div>
+ <div class="control-group"><div class="control-label">Wood door price per door (₹)</div><input type="text" id="woodPrice" value="15000" inputmode="numeric" aria-label="Wood door price per door" style="width:130px;padding:10px;border:1px solid #bbb;border-radius:6px;font:inherit"></div>
   </div>
 
   <div class="duel">
@@ -391,7 +394,7 @@
     <h2>Steel door vs wood door: at a glance</h2>
     <table class="compare-table">
       <tr><th>Factor</th><th>Steel Door</th><th>Wood Door</th></tr>
-      <tr><td>Upfront cost (mid-range, per door)</td><td class="steel-col">~₹18,000</td><td class="wood-col">~₹15,000</td></tr>
+      <tr><td>Upfront cost (example prices per door; yours may differ)</td><td class="steel-col">~₹18,000</td><td class="wood-col">~₹15,000</td></tr>
       <tr><td>Termite resistance</td><td class="steel-col">Not applicable</td><td class="wood-col">Needs treatment every 2–3 years</td></tr>
       <tr><td>Coastal humidity / salt-air performance</td><td class="steel-col">Strong, with powder coating</td><td class="wood-col">Prone to warping and swelling</td></tr>
       <tr><td>Typical maintenance cycle</td><td class="steel-col">Repaint every 5 years</td><td class="wood-col">Polish every 2 years</td></tr>
@@ -416,32 +419,32 @@
     </div>
     <div class="faq-item">
       <h3>What is the average cost of a steel door in Kanyakumari and Tirunelveli?</h3>
-      <p>Mid-range steel doors typically start around ₹18,000 per door installed, varying by size and design. RIDGE offers exact quotes based on door dimensions and site requirements.</p>
+      <p>Steel door prices vary with the type of door (for example imported or regular steel), size, design, brand and hardware. RIDGE offers exact quotes based on door dimensions and site requirements.</p>
     </div>
   </div>
 
   <div class="cta">
     <h3>Want the exact number for your house?</h3>
     <p>Send us your door sizes and we'll reply with a precise steel vs wood quote — no site visit needed to get started.</p>
-    <a class="wa-btn" id="waBtn" href="#" target="_blank" rel="noopener">
+    <a class="wa-btn" id="waBtn" href="https://wa.me/919080019508?text=Hi%20RIDGE%2C%20I%20would%20like%20a%20steel%20vs%20wood%20door%20quote." target="_blank" rel="noopener">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.46 17.5 2 12.04 2zm5.8 14.05c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.66-.79-3.08-1.27-5.06-4.4-5.22-4.6-.15-.21-1.25-1.66-1.25-3.17s.79-2.24 1.07-2.55c.28-.3.6-.38.8-.38.2 0 .4 0 .58.01.19.01.44-.07.68.53.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.33-.3.5-.15.18-.31.4-.44.53-.15.15-.3.31-.13.6.17.3.76 1.26 1.64 2.05 1.13 1 2.08 1.32 2.38 1.47.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.7.8 1.99.95.29.15.48.22.55.34.07.13.07.7-.18 1.4z"/></svg>
       Get my exact quote on WhatsApp
     </a>
   </div>
 
   <footer>
-    Estimates based on typical mid-range door sizes and coastal maintenance patterns in Kanyakumari &amp; Tirunelveli — actual costs vary by door size, wood grade and site conditions. RIDGE is an authorised dealer for Hawaii &amp; Fusim steel Doors and FRP Doors.
+    Estimates based on typical mid-range door sizes and coastal maintenance patterns in Kanyakumari &amp; Tirunelveli — actual costs vary by door size, wood grade and site conditions. RIDGE is an authorised dealer for Fusim &amp; Hawaii steel doors and supplies other brands to suit customer requirements. Prices shown are examples; enter the prices you were quoted for a like-for-like comparison.
   </footer>
 
 </div>
 
 <script>
-  
+  // ---- CONFIG: replace with your WhatsApp Business number (country code + number, no +/spaces) ----
   const WHATSAPP_NUMBER = "919080019508";
 
-  const steelUpfrontRate = 18000;
+  let steelUpfrontRate = 18000;
   const steelRepaintRate = 1500;
-  const woodUpfrontRate = 15000;
+  let woodUpfrontRate = 15000;
   const woodPolishRate = 2000;
   const woodTermiteRate = 2500;
   const woodRepairRate = 6000;
@@ -567,6 +570,10 @@
   yearsSlider.addEventListener('input', render);
 
   render();
+
+  const sP=document.getElementById('steelPrice'), wP=document.getElementById('woodPrice');
+  function readRates(){ const a=parseInt(sP.value.replace(/\D/g,''),10), b=parseInt(wP.value.replace(/\D/g,''),10); if(a>0) steelUpfrontRate=a; if(b>0) woodUpfrontRate=b; render(); }
+  sP.addEventListener('input',readRates); wP.addEventListener('input',readRates);
 </script>
 </body>
 </html>
